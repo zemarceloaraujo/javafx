@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.BorderPane?>
+<!--
+<VBox fx:controller="com.br.testezemarcelo.HelloController" xmlns:fx="http://javafx.com/fxml" styleClass="root" >
+
+  <GridPane hgap="10" vgap="10">
+
+
+    <Label text="Descrição do Produto" GridPane.columnIndex="0"
+           GridPane.rowIndex="0" GridPane.columnSpan="2"
+           GridPane.rowSpan="1" GridPane.halignment="CENTER" >
+      <font>
+        <Font name="Arial" size="30" ></Font>
+      </font>
+      <GridPane.margin>
+        <Insets top="20" right="0" bottom="20" left="0"></Insets>
+      </GridPane.margin>
+    </Label>
+
+    <Label text="Código do Produto : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="cdProduto" prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <Label text="Valor Unitário" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="vlUnitario" prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+    <Button fx:id="submitCupom" text="Gravar Cupom"
+            prefWidth="100" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="5"
+            GridPane.halignment="CENTER">
+    </Button>
+
+
+    <TextField fx:id="descricaoCupom" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="25"/>
+    <TextField fx:id="vlTotal" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="1"/>
+
+  </GridPane>
+
+
+
+
+</VBox>
+
+-->
+
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.br.testezemarcelo.HelloController">
+  <top>
+    <Label text="Descrição do Produto" BorderPane.alignment="CENTER">
+      <font>
+        <Font name="Arial" size="30" ></Font>
+      </font>
+      <GridPane.margin>
+        <Insets top="20" right="0" bottom="20" left="0"></Insets>
+      </GridPane.margin>
+    </Label>
+  </top>
+  <center>
+    <GridPane hgap="10" vgap="10">
+      <children>
+        <VBox GridPane.rowIndex="0" GridPane.columnIndex="0" spacing="10">
+          <children>
+            <Label text="Código do Produto : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <ComboBox fx:id="selecaoProduto" editable="true"/>
+
+            <Label text="Valor Unitário" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="vlUnitario" prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+            <Button fx:id="submitCupom" text="Gravar Cupom"
+                    prefWidth="100" prefHeight="40" defaultButton="true"
+                    GridPane.columnIndex="0" GridPane.rowIndex="5"
+                    GridPane.halignment="CENTER" onAction="#inserirCupom">
+            </Button>
+          </children>
+        </VBox>
+        <VBox GridPane.rowIndex="0" GridPane.columnIndex="1" spacing="10">
+          <children>
+            <TextArea  fx:id="descricaoCupom" prefRowCount="10" prefColumnCount="30" wrapText="true"/>
+            <TextField fx:id="vlTotal" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="1"/>
+          </children>
+        </VBox>
+      </children>
+    </GridPane>
+  </center>
+  <padding> <Insets top="20" right="20" bottom="20" left="20"/> </padding>
+</BorderPane>
+
+
+
